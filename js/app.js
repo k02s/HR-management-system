@@ -2,6 +2,8 @@
 
 let employeeID = 999; // this variable for calculate id method its like start point
 
+
+
 // objects
 let employee1 = {
     employeeID: generateEmployeeID(),
@@ -9,8 +11,15 @@ let employee1 = {
     department: 'Administration',
     level: 'Senior',
     imageURL: 'https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    salary: calculateSalary('Senior')
+
+
+    // method to calaulate salary and netSalary
+    Salary: function () {
+        this.salary = calculateSalary(this.level);
+    }
+
 };
+
 
 let employee2 = {
     employeeID: generateEmployeeID(),
@@ -18,7 +27,11 @@ let employee2 = {
     department: 'Finance',
     level: 'Senior',
     imageURL: 'https://images.pexels.com/photos/1586973/pexels-photo-1586973.jpeg?auto=compress&cs=tinysrgb&w=600',
-    salary: calculateSalary('Senior')
+
+    // method to calaulate salary and netSalary
+    Salary: function () {
+        this.salary = calculateSalary(this.level);
+    }
 };
 
 let employee3 = {
@@ -27,7 +40,11 @@ let employee3 = {
     department: 'Marketing',
     level: 'Senior',
     imageURL: 'https://images.pexels.com/photos/3747446/pexels-photo-3747446.jpeg?auto=compress&cs=tinysrgb&w=600',
-    salary: calculateSalary('Senior')
+
+    // method to calaulate salary and netSalary
+    Salary: function () {
+        this.salary = calculateSalary(this.level);
+    }
 };
 
 let employee4 = {
@@ -36,7 +53,11 @@ let employee4 = {
     department: 'Administration',
     level: 'Mid-Senior',
     imageURL: 'https://images.pexels.com/photos/927451/pexels-photo-927451.jpeg?auto=compress&cs=tinysrgb&w=600',
-    salary: calculateSalary('Mid-Senior')
+
+    // method to calaulate salary and netSalary
+    Salary: function () {
+        this.salary = calculateSalary(this.level);
+    }
 };
 
 let employee5 = {
@@ -45,7 +66,11 @@ let employee5 = {
     department: 'Development',
     level: 'Senior',
     imageURL: 'https://images.pexels.com/photos/927451/pexels-photo-927451.jpeg?auto=compress&cs=tinysrgb&w=600',
-    salary: calculateSalary('Senior')
+
+    // method to calaulate salary and netSalary
+    Salary: function () {
+        this.salary = calculateSalary(this.level);
+    }
 };
 
 let employee6 = {
@@ -54,7 +79,11 @@ let employee6 = {
     department: 'Development',
     level: 'Junior',
     imageURL: 'https://images.pexels.com/photos/1181414/pexels-photo-1181414.jpeg?auto=compress&cs=tinysrgb&w=600',
-    salary: calculateSalary('Junior')
+
+    // method to calaulate salary and netSalary
+    Salary: function () {
+        this.salary = calculateSalary(this.level);
+    }
 };
 
 let employee7 = {
@@ -63,7 +92,11 @@ let employee7 = {
     department: 'Finance',
     level: 'Mid-Senior',
     imageURL: 'https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg?auto=compress&cs=tinysrgb&w=600',
-    salary: calculateSalary('Mid-Senior')
+
+    // method to calaulate salary and netSalary
+    Salary: function () {
+        this.salary = calculateSalary(this.level);
+    }
 };
 
 // method to genarate ID
@@ -78,12 +111,12 @@ function generateEmployeeID() {
 function calculateSalary(employeeLevel) {
 
     let salary = 0;
-    let netSalary = 0;  
+    let netSalary = 0;
 
     // Math.floor(min + Math.random() * (max - min + 1));
 
     switch (employeeLevel) {
-        case "Senior": 
+        case "Senior":
             salary = Math.floor(1500 + Math.random() * (2000 - 1500 + 1));
             break;
         case "Mid-Senior":
@@ -102,6 +135,14 @@ function calculateSalary(employeeLevel) {
 function render() {
 
     const employeeContainer = document.getElementById("employee");
+
+    employee1.Salary();
+    employee2.Salary();
+    employee3.Salary();
+    employee4.Salary();
+    employee5.Salary();
+    employee6.Salary();
+    employee7.Salary();
 
     let employeeData = "";
 
