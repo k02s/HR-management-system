@@ -6,7 +6,10 @@ let employeeID = 999; // this variable for calculate id method its like start po
 
 // objects
 let employee1 = {
-    employeeID: generateEmployeeID(),
+    // employeeID: generateEmployeeID(),
+    EmpID: function () {
+        this.employeeID = generateEmployeeID();
+    },
     fullName: 'Ghazi Samer',
     department: 'Administration',
     level: 'Senior',
@@ -22,7 +25,10 @@ let employee1 = {
 
 
 let employee2 = {
-    employeeID: generateEmployeeID(),
+    // employeeID: generateEmployeeID(),
+    EmpID: function () {
+        this.employeeID = generateEmployeeID();
+    },
     fullName: 'Lana Ali',
     department: 'Finance',
     level: 'Senior',
@@ -35,7 +41,10 @@ let employee2 = {
 };
 
 let employee3 = {
-    employeeID: generateEmployeeID(),
+    // employeeID: generateEmployeeID(),
+    EmpID: function () {
+        this.employeeID = generateEmployeeID();
+    },
     fullName: 'Tamara Ayoub',
     department: 'Marketing',
     level: 'Senior',
@@ -48,7 +57,10 @@ let employee3 = {
 };
 
 let employee4 = {
-    employeeID: generateEmployeeID(),
+    // employeeID: generateEmployeeID(),
+    EmpID: function () {
+        this.employeeID = generateEmployeeID();
+    },
     fullName: 'Safi Walid',
     department: 'Administration',
     level: 'Mid-Senior',
@@ -61,7 +73,10 @@ let employee4 = {
 };
 
 let employee5 = {
-    employeeID: generateEmployeeID(),
+    // employeeID: generateEmployeeID(),
+    EmpID: function () {
+        this.employeeID = generateEmployeeID();
+    },
     fullName: 'Omar Zaid',
     department: 'Development',
     level: 'Senior',
@@ -74,7 +89,10 @@ let employee5 = {
 };
 
 let employee6 = {
-    employeeID: generateEmployeeID(),
+    // employeeID: generateEmployeeID(),
+    EmpID: function () {
+        this.employeeID = generateEmployeeID();
+    },
     fullName: 'Rana Saleh',
     department: 'Development',
     level: 'Junior',
@@ -87,7 +105,10 @@ let employee6 = {
 };
 
 let employee7 = {
-    employeeID: generateEmployeeID(),
+    //employeeID: generateEmployeeID(),
+    EmpID: function () {
+        this.employeeID = generateEmployeeID();
+    },
     fullName: 'Hadi Ahmad',
     department: 'Finance',
     level: 'Mid-Senior',
@@ -96,10 +117,10 @@ let employee7 = {
     // method to calaulate salary and netSalary
     Salary: function () {
         this.salary = calculateSalary(this.level);
-    }
+    }    
 };
 
-// method to genarate ID
+// // method to genarate ID
 function generateEmployeeID() {
 
     employeeID++;
