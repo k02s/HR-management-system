@@ -9,23 +9,22 @@ function calculateSalary(employeeLevel) {
 
     let salary = 0;
     let netSalary = 0;
-
-    // Math.floor(min + Math.random() * (max - min + 1));
-
+  
     switch (employeeLevel) {
-        case "Senior":
-            salary = Math.floor(1500 + Math.random() * (2000 - 1500 + 1));
-            break;
-        case "Mid-Senior":
-            salary = Math.floor(1000 + Math.random() * (1500 - 1000 + 1));
-            break;
-        case "Junior":
-            salary = Math.floor(500 + Math.random() * (1000 - 500 + 1));
-            break;
+      case "Senior":
+        salary = Math.ceil(1500 + Math.random() * (2000 - 1500 + 1));
+        break;
+      case "Mid-Senior":
+        salary = Math.ceil(1000 + Math.random() * (1500 - 1000 + 1));
+        break;
+      case "Junior":
+        salary = Math.ceil(500 + Math.random() * (1000 - 500 + 1));
+        break;
     }
     netSalary = salary - (salary * 0.075);
     return netSalary;
-}
+  }
+  
 
 // method to genarate ID
 function generateEmployeeID() {
